@@ -2,36 +2,16 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-import bankguru99.LoginPageUI;
-
-public class LoginPage extends AbstractPage {
+import joomla.LoginPageUI;
+    
+public class LoginPage extends AbstractPage{
 	WebDriver driver;
-
-	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+	public LoginPage (WebDriver driver){
+		this.driver =driver;
 	}
-
-	public String getCurrentHomePageURL() {
-		return getURL(driver);
-	}
-
-	String emai, url;
-
-	public RegisterPage clickToVisitHereLink() {
-		waitForControlVisible(driver, LoginPageUI.VISIT_HERE_LINK);
-		clickToElement(driver, LoginPageUI.VISIT_HERE_LINK);
-		return PageFactory.getRegisterPage(driver);
-	}
-
-	// public void openHomePageURL() {
-	// openURL(url);
-	// }
-	// public void getHomePageURL(){
-	// getURL(driver);
-
 	public void typeToUsername(String username) {
-		waitForControlVisible(driver, LoginPageUI.USERID_TEXTBOX);
-		senkeyToElement(driver, LoginPageUI.USERID_TEXTBOX, username);
+		waitForControlVisible(driver, LoginPageUI.USERNAME_TEXTBOX);
+		senkeyToElement(driver, LoginPageUI.USERNAME_TEXTBOX, username);
 	}
 
 	public void typeToPassword(String password) {

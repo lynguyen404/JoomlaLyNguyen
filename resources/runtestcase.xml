@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+<listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+
+</listeners>
+
+<test name="TestChrome">
++ <parameter name ="browser" value ="chrome"/>
++  <parameter name ="url" value ="http://demo.guru99.com/v4/"/>
++    <classes>
++      <class name="com.bankguru99.login.Customer_CreateCustomerSuccessfully"/>
++    </classes>
++   </test> 
+ <test name="TestHeadless">
++ <parameter name ="browser" value ="headless"/>
++  <parameter name ="url" value ="http://demo.guru99.com/v4/"/>
++    <classes>
++      <class name="com.bankguru99.login.Customer_CreateCustomerSuccessfully"/>
++    </classes>
++   </test> 
+
+ 
+</suite> <!-- Suite -->

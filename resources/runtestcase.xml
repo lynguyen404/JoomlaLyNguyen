@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
 
 <test name="TestChrome">
-+ <parameter name ="browser" value ="chrome"/>
++ <parameter name ="browser" value ="firefox"/>
 +  <parameter name ="url" value ="https://automationfc.joomla.com/administrator/"/>
 +    <classes>
 +      <class name="com.joomla.login.LoginSuccessfully"/>

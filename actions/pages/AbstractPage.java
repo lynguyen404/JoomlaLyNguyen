@@ -156,6 +156,16 @@ public class AbstractPage {
 		alert.sendKeys(expected);
 	}
 
+	public void moveToIfame(WebDriver driver, String locator) {
+		WebElement iframe = driver.findElement(By.xpath(locator));
+		driver.switchTo().frame(iframe);
+	}
+
+	public Articles moveToDefault(WebDriver driver) {
+		driver.switchTo().defaultContent();
+		return PageFactory.getArticles(driver);
+	}
+
 	public void swithWinDownById(String parent) {
 		Set<String> allwindowns = driver.getWindowHandles();
 		for (String childwindown : allwindowns) {
@@ -202,7 +212,7 @@ public class AbstractPage {
 	}
 
 	public void waitForControlVisible(WebDriver driver, String locator) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 80);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
 	}
 
@@ -253,5 +263,3 @@ public class AbstractPage {
 		action.clickAndHold(from).moveToElement(to).release(to).build().perform();
 	}
 }
-
-	

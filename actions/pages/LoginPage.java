@@ -3,12 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 
 import joomla.LoginPageUI;
-    
-public class LoginPage extends AbstractPage{
+
+public class LoginPage extends AbstractPage {
 	WebDriver driver;
-	public LoginPage (WebDriver driver){
-		this.driver =driver;
+
+	public LoginPage(WebDriver driver) {
+		this.driver = driver;
 	}
+
 	public void typeToUsername(String username) {
 		waitForControlVisible(driver, LoginPageUI.USERNAME_TEXTBOX);
 		senkeyToElement(driver, LoginPageUI.USERNAME_TEXTBOX, username);

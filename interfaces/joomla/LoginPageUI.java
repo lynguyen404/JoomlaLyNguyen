@@ -1,4 +1,5 @@
 package joomla;
+
 public class LoginPageUI {
 	public static String USERNAME_TEXTBOX = "//input[@name='username']";
 	public static String PASSWORD_TEXTBOX = "//input[@name='passwd']";

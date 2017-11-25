@@ -122,7 +122,7 @@ public class AbstractPage {
 		Assert.assertTrue(expected.equals(actualtext));
 	}
 
-	public void isCheckedCheckbox(String locator) {
+	public void isCheckedCheckbox(WebDriver driver,String locator) {
 		WebElement element = driver.findElement(By.xpath(locator));
 		if (!element.isSelected()) {
 			element.click();

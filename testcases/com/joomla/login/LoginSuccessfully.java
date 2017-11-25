@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import commons.AbstractTest;
 import pages.Articles;
 import pages.Content;
+import pages.EditContent;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.PageFactory;
@@ -28,6 +29,12 @@ public class LoginSuccessfully extends AbstractTest {
 		valueofdropdown = "- Manual Testing";
 		valueoftextarea = "Testing Automation";
 		savedarticlessuccessfully = "Article saved.";
+		edittitlename = "Edittitle" + randomEmail();
+		editvalueofdropdown = "- Automation Testing";
+		editvalueoftextarea = "Edit Testing Automation";
+		savedarticlessuccessfully = "Article saved.";
+		valueofstatusdropdown="Unpublished";
+		publicsuccessfully="1 article published.";
 		driver = openBrowser(browser, url);
 		loginPage = PageFactory.getLoginPage(driver);
 		loginPage.typeToUsername(username);
@@ -35,7 +42,7 @@ public class LoginSuccessfully extends AbstractTest {
 		homePage = loginPage.clickToLogin();
 	}
 
-	@Test
+	//@Test
 	public void TC_01_CreateArticlesSuccessfully() {
 		articles = homePage.clickOnMenuArticles();
 		content = articles.clickToNewButton();
@@ -47,7 +54,42 @@ public class LoginSuccessfully extends AbstractTest {
 		homePage = content.clickToSaveAndClose();
 		verifyTrue(homePage.isDisplayArticlesSaved(savedarticlessuccessfully));
 	}
-
+	//@Test
+	public void TC_02_EditArticlesSuccessfully(){
+		content = articles.clickToNewButton();
+		content.typeToTitle(titlename);
+		content.isSelectCatagory(valueofdropdown);
+		content.moveToJform();
+		content.typeToTextArea(valueoftextarea);
+		content.moveToDefault(driver);
+		homePage = content.clickToSaveAndClose();
+		articles.isCheckedCheckbox();
+		editcontent=articles.clickToEditButton();
+		editcontent.typeToTitle(edittitlename);
+		editcontent.isSelectCatagory(editvalueofdropdown);
+		editcontent.moveToJform();
+		editcontent.typeToTextArea(editvalueoftextarea);
+		editcontent.moveToDefault(driver);
+		homePage = editcontent.clickToSaveAndClose();
+		verifyTrue(homePage.isDisplayArticlesSaved(savedarticlessuccessfully));
+	}
+	
+	@Test
+	public void TC_03_PublicArticlesSuccessfully() {
+		articles = homePage.clickOnMenuArticles();
+		content = articles.clickToNewButton();
+		content.typeToTitle(titlename);
+		content.isSelectCatagory(valueofdropdown);
+		content.isSelectStatus(valueofstatusdropdown);
+		content.moveToJform();
+		content.typeToTextArea(valueoftextarea);
+		content.moveToDefault(driver);
+		homePage = content.clickToSaveAndClose();
+		verifyTrue(homePage.isDisplayArticlesSaved(savedarticlessuccessfully));
+		articles.isCheckedCheckbox();
+		articles.isPublicArticles();
+		articles.isDisplayPubicArticles(publicsuccessfully);
+	}
 	@AfterClass
 	public void afterClass() {
 		closeBrowser(driver);
@@ -57,5 +99,10 @@ public class LoginSuccessfully extends AbstractTest {
 	private HomePage homePage;
 	private Articles articles;
 	private Content content;
+	private EditContent editcontent;
 	private String titlename, valueofdropdown, valueoftextarea, savedarticlessuccessfully;
+	private String edittitlename, editvalueofdropdown, editvalueoftextarea;
+	private String valueofstatusdropdown,publicsuccessfully;
+	
+	
 }

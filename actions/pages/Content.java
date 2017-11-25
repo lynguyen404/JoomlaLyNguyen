@@ -18,17 +18,21 @@ public class Content extends AbstractPage {
 	}
 
 	public void typeToTitle(String titlename) {
-		waitForControlVisible(driver, ArticlesUI.NAME_TITLE);
-		senkeyToElement(driver, ArticlesUI.NAME_TITLE, titlename);
+		waitForControlVisible(driver, ContentUI.NAME_TITLE);
+		senkeyToElement(driver, ContentUI.NAME_TITLE, titlename);
 	}
 
 	public void isSelectCatagory(String valueofdropdown) {
-		waitForControlVisible(driver, ArticlesUI.DROPDOWN_VALUE);
-		isSelectedElement(driver, ArticlesUI.DROPDOWN_VALUE, valueofdropdown);
+		waitForControlVisible(driver, ContentUI.DROPDOWN_VALUE);
+		isSelectedElement(driver, ContentUI.DROPDOWN_VALUE, valueofdropdown);
+	}
+	public void isSelectStatus(String valueofstatusdropdown) {
+		waitForControlVisible(driver, ContentUI.STATUS_DROPDOWN);
+		isSelectedElement(driver, ContentUI.STATUS_DROPDOWN, valueofstatusdropdown);
 	}
 
 	public Content moveToJform() {
-		moveToIfame(driver, ArticlesUI.IFRAME_JFORM);
+		moveToIfame(driver, ContentUI.IFRAME_JFORM);
 		return PageFactory.getContents(driver);
 	}
 
@@ -37,7 +41,7 @@ public class Content extends AbstractPage {
 	}
 
 	public HomePage clickToSaveAndClose() {
-		clickToElement(driver, ArticlesUI.SAVEANDCLOSE_BUTTON);
+		clickToElement(driver, ContentUI.SAVEANDCLOSE_BUTTON);
 		return PageFactory.getHomePage(driver);
 	}
 }

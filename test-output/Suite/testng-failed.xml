@@ -10,6 +10,7 @@
       <class name="com.joomla.login.LoginSuccessfully">
         <methods>
           <include name="afterClass"/>
+          <include name="TC_03_PublicArticlesSuccessfully"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.joomla.login.LoginSuccessfully -->

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="45315" started-at="2017-11-19T15:42:55Z" finished-at="2017-11-19T15:43:40Z">
+  <suite name="Suite" duration-ms="43789" started-at="2017-11-25T07:45:20Z" finished-at="2017-11-25T07:46:04Z">
     <groups>
     </groups>
-    <test name="TestChrome" duration-ms="45315" started-at="2017-11-19T15:42:55Z" finished-at="2017-11-19T15:43:40Z">
+    <test name="TestChrome" duration-ms="43789" started-at="2017-11-25T07:45:20Z" finished-at="2017-11-25T07:46:04Z">
       <class name="com.joomla.login.LoginSuccessfully">
-        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.joomla.login.LoginSuccessfully@5f150435]" name="beforeClass" is-config="true" duration-ms="18802" started-at="2017-11-19T22:42:55Z" finished-at="2017-11-19T22:43:14Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.joomla.login.LoginSuccessfully@5f150435]" name="beforeClass" is-config="true" duration-ms="18175" started-at="2017-11-25T14:45:20Z" finished-at="2017-11-25T14:45:39Z">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_CreateArticlesSuccessfully()[pri:0, instance:com.joomla.login.LoginSuccessfully@5f150435]" name="TC_01_CreateArticlesSuccessfully" duration-ms="25393" started-at="2017-11-19T22:43:14Z" finished-at="2017-11-19T22:43:39Z">
+        <test-method status="PASS" signature="TC_03_PublicArticlesSuccessfully()[pri:0, instance:com.joomla.login.LoginSuccessfully@5f150435]" name="TC_03_PublicArticlesSuccessfully" duration-ms="24868" started-at="2017-11-25T14:45:39Z" finished-at="2017-11-25T14:46:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_CreateArticlesSuccessfully -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.joomla.login.LoginSuccessfully@5f150435]" name="afterClass" is-config="true" duration-ms="1108" started-at="2017-11-19T22:43:39Z" finished-at="2017-11-19T22:43:40Z">
+        </test-method> <!-- TC_03_PublicArticlesSuccessfully -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.joomla.login.LoginSuccessfully@5f150435]" name="afterClass" is-config="true" duration-ms="731" started-at="2017-11-25T14:46:04Z" finished-at="2017-11-25T14:46:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

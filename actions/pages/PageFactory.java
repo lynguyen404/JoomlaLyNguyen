@@ -21,4 +21,7 @@ public class PageFactory {
 	public static Content getContents(WebDriver driver) {
 		return new Content(driver);
 	}
+	public static EditContent getEditContents(WebDriver driver) {
+		return new EditContent(driver);
+	}
 }
